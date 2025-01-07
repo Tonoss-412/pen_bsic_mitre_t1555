@@ -1,0 +1,15 @@
+•	Bước 1: Sinh viên sử dụng thông tin máy victim đã được cung cấp trong file credential.txt có sẵn để truy cập máy victim.
+				Attacker: 
+ssh <username>@<ip_victim>
+•	Bước 2: Sau khi ssh thành công vào máy victim, sinh viên thực hiện tìm kiếm các file database có trên máy victim
+				Victim: 
+find / -type f -name "*.db" 2>/dev/null
+o	find: Lệnh tìm kiếm file và thư mục trên hệ thống.
+o	/: Thư mục gốc, tìm trên toàn bộ hệ thống.
+o	-type f: Chỉ tìm file (không bao gồm thư mục).
+o	-name "*.db": Tìm file có tên kết thúc với đuôi .db.
+o	2>/dev/null: Chuyển hướng các thông báo lỗi (ví dụ: truy cập bị từ chối) sang /dev/null để lệnh không bị gián đoạn.
+•	Bước 3: Sinh viên phát hiện file .db khác với các file .db có sẵn thường thấy trên máy ubuntu thông thường đó là file .db của trình duyệt.
+•	Bước 4: Sinh viên dùng các thao tác cơ bản với database để truy xuất thông tin trong file .db đó. Sau đó giải mã và dùng thông tin có được để đăng nhập vào các trang web tương ứng. 
+•	Bước 5: Các thông tin xác thực được lưu trong file .db này có thể chưa chính xác nếu mật khẩu chưa được cập nhật. Sinh viên sẽ dùng các thông tin thu thập được để đăng nhập vào các trang web tương ứng. Qua đó, xác định được thông tin xác thực đúng mà đã thu thập được để truy cập trang web.
+
